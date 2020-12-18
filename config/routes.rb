@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #write custom routes up top to avoid issues
+
+  get '/signup' => 'users#new'
+  
   resources :reviews
   resources :movies
   resources :users
