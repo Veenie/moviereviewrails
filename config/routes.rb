@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   #write custom routes up top to avoid issues
 
+  root 'sessions#home'
+
+  #sign up
   get '/signup' => 'users#new'
+
+
+  #log out
+  delete '/logout' => 'sessions#delete'
   
   resources :reviews
   resources :movies
