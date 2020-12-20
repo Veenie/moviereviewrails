@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
   #log out
-  delete '/logout' => 'sessions#delete'
+  delete '/logout' => 'sessions#destroy'
   
   resources :reviews
   resources :movies
