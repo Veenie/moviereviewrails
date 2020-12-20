@@ -11,16 +11,16 @@
 
   <body>
   <div> 
+
+  <%= link_to "Home", '/' %> |
   
   <% if logged_in? %>
+  <%= link_to "Movies Index", movies_path %> |
 
   <%= link_to "Logout", logout_path, method: :delete %>
 
   <% else %>
-
-  <%= link_to "Home", '/' %>
-
-  <%= link_to "Sign Up", signup_path %>
+  <%= link_to "Sign Up", signup_path %> |
 
   <%= link_to "Log in", login_path %>
   
