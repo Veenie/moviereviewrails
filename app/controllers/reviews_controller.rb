@@ -5,6 +5,10 @@ class ReviewsController < ApplicationController
 
 
 
+    def index
+      if params[:movie_id]
+      else
+        @reviews = Review.all  
     def show
       @review = Review.find_by(id: params[:id])
     end
