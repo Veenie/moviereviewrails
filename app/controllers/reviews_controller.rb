@@ -35,9 +35,9 @@ class ReviewsController < ApplicationController
       @review = Review.find_by(id: params[:id])
     end
 
-    def patch
+    def update
       @review = Review.find_by(id: params[:id])
-      @review.update(header: params[:review][:header], body: params[:review][:body])
+      @review.update(review_params)
       redirect_to @review
     end    
 
