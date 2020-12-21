@@ -6,13 +6,14 @@ class ReviewsController < ApplicationController
 
 
     def index
-      if params[:movie_id] && @movie = Movie.find_by(params[:post_id])
+      if params[:movie_id] && @movie = Movie.find_by(params[:movie_id])
         @reviews = @movie.reviews
       else
-        @reviews = Review.all  
+        @error = "Movie not found" if params[:movie_id]
+        @reviews = Review.all
       end
     end
-        
+
     def show
       @review = Review.find_by(id: params[:id])
     end
@@ -47,6 +48,6 @@ class ReviewsController < ApplicationController
 
     def review_params
        params.require(:review).permit(:header, :body)
-    end  
+    end
 
 end
