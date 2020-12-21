@@ -14,8 +14,11 @@ Rails.application.routes.draw do
   #log out
   delete '/logout' => 'sessions#destroy'
   
-  resources :reviews
-  resources :movies
   resources :users
+  resources :reviews
+  resources :movies do
+    resources :reviews
+  end
+ 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
