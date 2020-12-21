@@ -6,9 +6,13 @@ class ReviewsController < ApplicationController
 
 
     def index
-      if params[:movie_id]
+      if params[:movie_id] && @movie = Movie.find_by(params[:post_id])
+        @reviews = @movie.reviews
       else
         @reviews = Review.all  
+      end
+    end
+        
     def show
       @review = Review.find_by(id: params[:id])
     end
