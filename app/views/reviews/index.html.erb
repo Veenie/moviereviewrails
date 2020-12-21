@@ -1,0 +1,8 @@
+<h1> All Reviews </h1>
+
+<% @reviews.each do |r| %>
+    <br>
+    <%= r.movie.title %>
+    <%= link_to r.header, review_path(r) %>
+    </br>
+<% end %>
