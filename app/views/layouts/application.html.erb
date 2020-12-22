@@ -18,11 +18,11 @@
 
   <%= link_to "Your Content", user_path(current_user.id) %> |
 
+  <%= link_to "Create New Review", new_user_review_path(current_user.id) %> |
+
   <%= link_to "Movies Index", movies_path %> |
 
   <%= link_to "Reviews Index", reviews_path %> |
-
-  <%= link_to "Create New Review", new_review_path %> |
 
   <%= link_to "Logout", logout_path, method: :delete %>
 
