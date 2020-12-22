@@ -23,9 +23,9 @@ class ReviewsController < ApplicationController
     end
 
     def create
-      review = current.user.reviews.build(review_params)
-      if review.save
-        redirect_to review_path(review)
+      @review = current.user.reviews.build(review_params)
+      if @review.save
+        redirect_to review_path(@review)
       else
         render :new
       end    
@@ -36,9 +36,9 @@ class ReviewsController < ApplicationController
     end
 
     def update
-      review = Review.find_by(id: params[:id])
-      review.update(review_params)
-      redirect_to review_path(review)
+      @review = Review.find_by(id: params[:id])
+      @review.update(review_params)
+      redirect_to review_path(@review)
     end
 
     def delete
