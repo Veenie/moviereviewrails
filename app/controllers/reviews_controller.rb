@@ -27,6 +27,7 @@ class ReviewsController < ApplicationController
       if @review.save
         redirect_to review_path(@review)
       else
+        @errors = @review.errors.full_messages
         render :new
       end    
     end
