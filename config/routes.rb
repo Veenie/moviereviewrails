@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   end  
 
   resources :movies do
-    resources :reviews, only: [:new, :create, :index]
+    resources :reviews, only: [:new, :create, :index, :show]
   end
  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

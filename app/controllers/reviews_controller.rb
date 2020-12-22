@@ -37,10 +37,10 @@ class ReviewsController < ApplicationController
       redirect_to review_path(@review)
     end
 
-    def delete
-      review = Review.find_by(id: params[:id])
+    def destroy
+      review = Review.find(params[:id])
       review.destroy
-      redirect to '/reviews'
+      redirect_to '/reviews'
     end
 
     private
