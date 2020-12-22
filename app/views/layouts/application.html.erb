@@ -15,6 +15,9 @@
   <%= link_to "Home", '/' %> |
   
   <% if logged_in? %>
+
+  <%= link_to "Your Content", user_path(current_user.id) %> |
+
   <%= link_to "Movies Index", movies_path %> |
 
   <%= link_to "Reviews Index", reviews_path %> |
