@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
 
     def show
       @review = Review.find_by(id: params[:id])
+      redirect_to '/' if !@review
     end
 
     def new
