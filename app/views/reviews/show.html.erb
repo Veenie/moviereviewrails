@@ -9,5 +9,15 @@ Review:
 <br>
 <%= @review.body %></h2>
 
-<%= button_to "Edit", edit_review_path(@review) %>
-<%= button_to "Delete", @review, method: :delete %>
+<% if @review.user == current_user %>
+  <%= link_to "Edit Review", edit_review_path(@review)%>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <%= button_to "Delete", @review, method: :delete %>
+<% end %>
