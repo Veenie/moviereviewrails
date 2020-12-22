@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
       if params[:movie_id] && @movie = Movie.find_by(params[:movie_id])
         @reviews = @movie.reviews
       else
-        @error = "Movie not found" if params[:movie_id]
+        @errors = "Movie not found" if params[:movie_id]
         @reviews = Review.all
       end
     end

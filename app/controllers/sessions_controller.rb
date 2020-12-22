@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             redirect_to user_path(user)
         else
-            flash[:message] = "Bad log in information, please try again"
+            @errors = "Bad log in information, please try again"
             redirect_to '/login'
         end
     end
