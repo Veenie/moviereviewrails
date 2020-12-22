@@ -21,10 +21,10 @@ class UsersController < ApplicationController
     end
     
     def show
-        redirect_if_not_logged_in
+        #redirect_if_not_logged_in
         #we use find_by rather than find because we get a nil result for our redirect
         @user = User.find_by_id(params[:id])
-        redirect_to '/' if @user.id == !current_user
+        redirect_to '/' if !@user 
     end
 
     # def login
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 
     def user_params
        params.require(:user).permit(:name, :password)
-    end    
+    end
 
 
 

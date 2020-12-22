@@ -14,9 +14,10 @@ private
     !!session[:user_id]
   end
   
-  def redirect_if_not_logged_in
-    redirect_to '/reviews' if !logged_in?
-  end 
+  # def redirect_if_not_logged_in
+    
+  #   redirect_to '/reviews' unless logged_in?
+  # end 
 
 
 
