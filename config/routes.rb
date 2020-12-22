@@ -18,11 +18,11 @@ Rails.application.routes.draw do
   resources :reviews
 
   resources :users do
-    resources :reviews
+    resources :reviews, shallow: true
   end  
 
   resources :movies do
-    resources :reviews, only: [:new, :create, :index, :show]
+    resources :reviews, only: [:index, :show]
   end
  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

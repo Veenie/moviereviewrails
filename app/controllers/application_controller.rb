@@ -11,11 +11,11 @@ private
   end 
 
   def logged_in?
-    !!current_user
+    !!session[:user_id]
   end
   
   def redirect_if_not_logged_in
-    redirect_to '/' if !logged_in?
+    redirect_to '/reviews' if !logged_in?
   end 
 
 

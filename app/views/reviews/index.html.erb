@@ -5,5 +5,8 @@
     <h3> Film: <%= r.movie.title %>
     <br>
     Review Title: <%= link_to r.header, movie_review_path(r.movie_id, r) %>
-    </br></h3>
+    </br>
+    Reviewer: <%= r.user.name %>
+    </h3>
+
 <% end %>
