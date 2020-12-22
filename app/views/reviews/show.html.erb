@@ -1,10 +1,13 @@
-<h1><%=Review for @review.movie.title %></h1>
+<h2>Review for <%=@review.movie.title %>
 <br>
+<h3> 
+Reviewer: <%= @review.user.name %>
 <br>
-<h2><%= @review.header %></h2>
+Review Title: <%= @review.header %>
 <br>
+Review:
 <br>
-<p> <%= @review.body %>
+<%= @review.body %></h2>
 
 <%= button_to "Edit", edit_review_path(@review) %>
 <%= button_to "Delete", @review, method: :delete %>
