@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
@@ -54,6 +54,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'omniauth'
-gem 'omniauth-facebook'
+#gem 'omniauth'
+gem 'omniauth-google_oauth2'
 gem 'dotenv-rails'
+gem 'ruby-saml', '~> 0.7.0' 
+
+gem 'omniauth', '>= 1.1.1'
+gem 'omniauth-saml', '~> 1.0.0'
+gem 'omniauth-github'

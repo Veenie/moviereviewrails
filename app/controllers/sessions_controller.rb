@@ -13,7 +13,22 @@ class SessionsController < ApplicationController
         end
     end
 
-    
+    def g_login
+        byebug
+        user = User.find_or_create_by(name: request.env['omniauth.auth']['info']) do |u|
+            u.password = SecureRandom.hex(10)
+        end
+        user.save
+        session[:user.id] = user.id
+        redirect_to user_path(user)
+
+
+
+
+
+
+    end
+
     def destroy
         session.clear
         redirect_to '/'

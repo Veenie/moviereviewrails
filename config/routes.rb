@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post 'login' => 'sessions#create'
 
+  #google login
+
+  get '/auth/github/callback', to: 'sessions#g_login'
+
 
   #log out
   delete '/logout' => 'sessions#destroy'
