@@ -1,12 +1,12 @@
 <h1> All Reviews </h1>
 
 <% @reviews.each do |r| %>
-    <br>
-    <h3> Film: <%= r.movie.title %>
-    <br>
+    <h2><br>
     Review Title: <%= link_to r.header, movie_review_path(r.movie_id, r) %>
+    <br></h2>
+    <h3> Film: <%= link_to r.movie.title, movie_path(r.movie_id) %>
     </br>
-    Reviewer: <%= r.user.name %>
+    Reviewer: <%= link_to r.user.name, user_path(r.user_id) %>
     </h3>
 
 <% end %>

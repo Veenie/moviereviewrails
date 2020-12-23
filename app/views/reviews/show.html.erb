@@ -1,9 +1,11 @@
-<h2>Review for <%=@review.movie.title %>
+<h2>Review for <%= link_to @review.movie.title, movie_path(@review.movie_id) %>
 <br>
 <h3> 
-Reviewer: <%= @review.user.name %>
+Reviewer: <%= link_to @review.user.name, user_path(@review.user_id) %>
+<br>
 <br>
 Review Title: <%= @review.header %>
+<br>
 <br>
 Review:
 <br>
