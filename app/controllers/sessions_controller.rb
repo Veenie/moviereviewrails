@@ -14,9 +14,10 @@ class SessionsController < ApplicationController
     end
 
     def g_login
-        byebug
-        user = User.find_or_create_by(name: auth['email']) do |u|
+        
+        user = User.find_or_create_by(username: auth['email']) do |u|
             u.password = SecureRandom.hex(10)
+            binding.pry
         end
         user.save
         session[:user.id] = user.id
@@ -32,6 +33,7 @@ class SessionsController < ApplicationController
     private
 
     def auth
+        #binding.pry
         request.env['omniauth.auth']['info']
     end
 
