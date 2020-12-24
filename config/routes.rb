@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   #google login
 
-  get '/auth/github/callback', to: 'sessions#g_login'
+  #match '/auth/github/callback', to: 'sessions#g_login', via: [:get, :post]
+
+  get '/auth/facebook/callback', to: 'sessions#g_login'
 
 
   #log out
