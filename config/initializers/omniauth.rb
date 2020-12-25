@@ -1,3 +1,4 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-    provider :facebook, ENV['KEY'], ENV['SECRET']
+    provider :github, ENV['KEY'], ENV['SECRET']
+    #, {callback_path: '/auth/facebook/callback'}
   end

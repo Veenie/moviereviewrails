@@ -14,12 +14,13 @@ class SessionsController < ApplicationController
     end
 
     def g_login
-        
-        user = User.find_or_create_by(username: auth['email']) do |u|
+        #binding.pry
+        user = User.find_or_create_by(name: auth['email']) do |u|
             u.password = SecureRandom.hex(10)
-            binding.pry
+            #binding.pry
         end
         user.save
+        binding.pry
         session[:user.id] = user.id
         redirect_to user_path(user)
     end

@@ -55,13 +55,14 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #gem 'omniauth'
-gem 'omniauth-google_oauth2'
+#gem 'omniauth-google_oauth2'
 gem 'dotenv-rails'
-gem 'ruby-saml', '~> 0.7.0' 
+#gem 'ruby-saml', '~> 0.7.0' 
 
 gem 'omniauth'
-gem 'omniauth-saml', '~> 1.0.0'
+#gem 'omniauth-saml', '~> 1.0.0'
 gem 'omniauth-github'
 gem 'omniauth-facebook'
 gem 'thin'
 gem 'omniauth-rails_csrf_protection'
+#gem 'devise'

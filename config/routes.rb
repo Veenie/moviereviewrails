@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   #match '/auth/github/callback', to: 'sessions#g_login', via: [:get, :post]
 
-  get '/auth/facebook', to: 'sessions#g_login'
+  get '/auth/github/callback' => 'sessions#g_login'
 
 
   #log out
@@ -31,5 +31,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :show]
   end
  
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
