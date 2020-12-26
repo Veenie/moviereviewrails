@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
   get '/auth/github/callback' => 'sessions#g_login'
 
-
   #log out
   delete '/logout' => 'sessions#destroy'
   

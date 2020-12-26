@@ -14,15 +14,12 @@ class SessionsController < ApplicationController
     end
 
     def g_login
-        #binding.pry
         user = User.find_or_create_by(name: auth['email']) do |u|
             u.password = SecureRandom.hex(10)
-            #binding.pry
         end
-        user.save
-        binding.pry
-        session[:user.id] = user.id
+        session[:user_id] = user.id
         redirect_to user_path(user)
+
     end
 
     def destroy
@@ -34,7 +31,6 @@ class SessionsController < ApplicationController
     private
 
     def auth
-        #binding.pry
         request.env['omniauth.auth']['info']
     end
 
