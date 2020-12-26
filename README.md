@@ -1,24 +1,10 @@
+
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To begin please run rails s.
 
-Things you may want to cover:
+You can write film reviews for all of the live action Batman films.
 
-* Ruby version
+You'll need to create an account to begin or you can sign in via github!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Enjoy browsing the reviews of others or you may edit your existing reviews!
