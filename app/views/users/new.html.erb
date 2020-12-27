@@ -2,15 +2,5 @@
 <br>
 <p> Please create a name and password below and you can start reviewing movies! </p>
 <br>
-<%= form_for(@user) do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <br>
-    <br>
-    <%= f.label :password %>
-    <%= f.password_field :password%>
-    <br>
-    <br>
 
-    <%= f.submit "Submit" %>
-    <% end %>
+    <%= render 'sessions/form' %>
