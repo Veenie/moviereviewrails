@@ -1,4 +1,4 @@
-<h2>Review for <%= link_to @review.movie.title, movie_path(@review.movie_id) %>
+<h2>Review for <%= link_to @review.movie.title, movie_path(@review.movie_id) %></h2>
 <br>
 <h3> 
 Reviewer: <%= link_to @review.user.name, user_path(@review.user_id) %>
@@ -9,7 +9,7 @@ Review Title: <%= @review.header %>
 <br>
 Review:
 <br>
-<%= @review.body %></h2>
+<%= @review.body %>
 
 <% if @review.user == current_user %>
   <%= link_to "Edit Review", edit_review_path(@review)%>
@@ -22,4 +22,4 @@ Review:
 <br>
 <br>
   <%= button_to "Delete", @review, method: :delete %>
-<% end %>
+<% end %></h3>
