@@ -12,6 +12,8 @@ Review:
 <%= @review.body %>
 
 <% if @review.user == current_user %>
+<br>
+<br>
   <%= link_to "Edit Review", edit_review_path(@review)%>
 <br>
 <br>
