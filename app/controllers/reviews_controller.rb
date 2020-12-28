@@ -1,9 +1,5 @@
 class ReviewsController < ApplicationController
 
-    def index
-        @reviews = Review.all
-    end
-
     def show
       @review = Review.find_by(id: params[:id])
       redirect_to '/' if !@review
@@ -25,7 +21,7 @@ class ReviewsController < ApplicationController
 
     def edit
       @review = Review.find_by(id: params[:id])
-      redirect_to reviews_path if !@review || @review.user != current_user
+      redirect_to review_path(@review) if !@review || @review.user != current_user
     end
 
     def update
@@ -42,7 +38,7 @@ class ReviewsController < ApplicationController
     def destroy
       review = Review.find(params[:id])
       review.destroy
-      redirect_to '/reviews'
+      redirect_to '/'
     end
 
     private
