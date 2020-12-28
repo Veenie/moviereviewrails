@@ -1,9 +1,6 @@
-<h1><%=@movie.title %></h1>
-
-
-<h2> Reviews for <%= @movie.title %> </h2>
+<h1> Reviews for <%= @movie.title %> </h1>
 <h3><% @movie.reviews.each do |r| %>
-    <%= link_to r.header, movie_review_path(r.movie_id, r)  %> by 
+    <%= link_to r.header, movie_review_path(r.movie_id, r) %> by 
     <%= link_to r.user.name, user_path(r.user_id) %>
     <br>
     <br>
