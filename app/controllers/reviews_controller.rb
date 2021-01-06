@@ -20,6 +20,8 @@ class ReviewsController < ApplicationController
     end
 
     def edit
+      @review = Review.find_by(id: params[:id])
+      #redirect_to review_path(@review) if !@review || @review.user != current_user
     end
 
     def update
@@ -51,11 +53,11 @@ class ReviewsController < ApplicationController
       end  
     end
 
-    def review_auth
-      redirect_to review_path(@review) 
+    def review_auth 
       if @review.user != current_user
+        redirect_to '/'
         flash[:message] = "Unauthorized action"
-      end  
+      end
     end  
 
 end
