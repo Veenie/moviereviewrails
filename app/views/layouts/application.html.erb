@@ -22,12 +22,16 @@
 
   <%= link_to "Movies Index", movies_path %> |
 
+  <%= link_to "Latest Film", movie_path(Movie.latest) %> |
+
   <%= link_to "Logout", logout_path, method: :delete %>
 
   <% else %>
   <%= link_to "Sign Up", signup_path %> |
 
   <%= link_to "Log in", login_path %> |
+
+  
 
   <%= link_to "Sign in with GitHub", '/auth/github', method: :post %>
 

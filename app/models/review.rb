@@ -14,7 +14,7 @@ class Review < ApplicationRecord
     if reviews_today.size > 2
       errors.add(:review_id, "can't post more than 3 times a day")
     end  
-  end  
+  end
 
   
 end

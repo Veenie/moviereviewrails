@@ -5,5 +5,10 @@ class Movie < ApplicationRecord
 
     scope :alpha, -> { order(:title) }
 
+    def self.latest
+        #byebug
+        Movie.order(:year).last
+    end
+
 
 end
