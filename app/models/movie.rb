@@ -6,8 +6,4 @@ class Movie < ApplicationRecord
     scope :alpha, -> { order(:title) }
 
 
-    def self.last
-        byebug
-        Movie.order.last
-    end
 end
