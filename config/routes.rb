@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   #match '/auth/github/callback', to: 'sessions#g_login', via: [:get, :post]
 
+  get '/latest' => 'movies#latest'
+
   get '/auth/github/callback' => 'sessions#g_login'
 
   #log out
