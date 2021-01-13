@@ -15,3 +15,9 @@
  */
 
  .fields_with_errors input {border-color: red}
+
+ body{ background: url("batground.png");
+background-size: 50%;
+background-repeat:no-repeat ;
+background-position: 350px 150px;
+}
