@@ -1,6 +1,6 @@
-<h1>Hello, <%= current_user.name %>!</h1>
 
-<h2>The following is a list of reviews by <%= @user.name %>! </h2>
+
+<h3>The following is a list of reviews by:</h3> <h1><%= @user.name %></h1>
 
 <h3><% @user.reviews.each do |r| %>
     Review Title: <%= link_to r.header, movie_review_path(r.movie_id, r) %> 

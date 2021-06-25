@@ -1,7 +1,12 @@
 <%= form_for(@review) do |f| %>
     <%= f.label "Movie" %>
     <br>
+    <% if @movie %>
+        <%= @movie.title %>
+        <%= f.hidden_field :movie_id, value: @movie.id %>
+    <% else %>
     <%= f.collection_select(:movie_id, Movie.all, :id, :title) %>
+    <% end %>
     <br>
     <%= f.label "Header" %>
     <br>

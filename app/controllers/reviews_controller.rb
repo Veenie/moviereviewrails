@@ -6,6 +6,9 @@ class ReviewsController < ApplicationController
     end
 
     def new
+      #byebug
+      @movie = Movie.find_by(id: params[:movie_id])
+
       @review = Review.new
     end
 

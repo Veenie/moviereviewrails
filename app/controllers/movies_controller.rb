@@ -8,9 +8,6 @@ class MoviesController < ApplicationController
     @movies = Movie.alpha
   end
 
-  def latest
-    redirect_to movie_path(Movie.latest)
-  end  
 
 
 end

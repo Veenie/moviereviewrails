@@ -10,18 +10,14 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post 'login' => 'sessions#create'
 
-  #google login
 
   #match '/auth/github/callback', to: 'sessions#g_login', via: [:get, :post]
-
-  get '/latest' => 'movies#latest'
 
   get '/auth/github/callback' => 'sessions#g_login'
 
   #log out
   delete '/logout' => 'sessions#destroy'
-  
-  
+
   resources :reviews
 
   resources :users do
@@ -29,7 +25,7 @@ Rails.application.routes.draw do
   end  
 
   resources :movies do
-    resources :reviews, only: [:index, :show]
+    resources :reviews, only: [:index, :show, :new]
   end
  
   
